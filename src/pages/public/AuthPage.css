@@ -1,0 +1,93 @@
+.auth-page {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    padding: var(--space-8) var(--space-4);
+}
+
+.auth-page__card {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-10) var(--space-8);
+    width: 100%;
+    max-width: 440px;
+}
+
+.auth-page__card--wide {
+    max-width: 600px;
+}
+
+.auth-page__header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.auth-page__logo {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 auto var(--space-5);
+}
+
+.auth-page__title {
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-2);
+}
+
+.auth-page__sub {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.auth-page__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.auth-page__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+}
+
+@media (max-width: 600px) {
+    .auth-page__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.auth-page__error {
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.auth-page__switch {
+    text-align: center;
+    margin-top: var(--space-6);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.auth-page__link {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}

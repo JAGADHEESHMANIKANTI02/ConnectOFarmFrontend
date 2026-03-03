@@ -1,0 +1,18 @@
+.public-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.public-layout__main {
+    flex: 1;
+}
+
+.public-layout__footer {
+    background: var(--color-primary-dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: var(--space-6) 0;
+    text-align: center;
+    font-size: var(--text-sm);
+    margin-top: auto;
+}

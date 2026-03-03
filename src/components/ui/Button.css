@@ -1,0 +1,119 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Sizes */
+.btn--sm {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+}
+
+.btn--md {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-base);
+}
+
+.btn--lg {
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--text-lg);
+}
+
+.btn--full {
+    width: 100%;
+}
+
+/* Variants */
+.btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(45, 106, 79, 0.3);
+}
+
+.btn--primary:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    box-shadow: 0 4px 16px rgba(45, 106, 79, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn--accent {
+    background: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(244, 162, 97, 0.3);
+}
+
+.btn--accent:hover:not(:disabled) {
+    background: var(--color-accent-hover);
+    transform: translateY(-1px);
+}
+
+.btn--secondary {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn--secondary:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.btn--ghost:hover:not(:disabled) {
+    background: var(--color-surface-2);
+    color: var(--color-text);
+}
+
+.btn--danger {
+    background: var(--color-danger);
+    color: #fff;
+}
+
+.btn--danger:hover:not(:disabled) {
+    background: #b91c1c;
+    transform: translateY(-1px);
+}
+
+/* Spinner */
+.btn__spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+}
+
+.btn--ghost .btn__spinner,
+.btn--secondary .btn__spinner {
+    border-color: rgba(45, 106, 79, 0.3);
+    border-top-color: var(--color-primary);
+}
+
+.btn__icon {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
